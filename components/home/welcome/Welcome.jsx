@@ -54,6 +54,7 @@ const Welcome = () => {
                 <Text style={styles.tabText(activeBookType, item)}>{item}</Text>
             </TouchableOpacity>
           )}
+          horizontal
           />
       </View>
 

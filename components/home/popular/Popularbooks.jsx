@@ -8,7 +8,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const Popularbooks = () => {
   const router = useRouter();
-  const isLoading = true;
+  const isLoading = false;
   const error = false;
   return (
     <View style={styles.container}>
@@ -25,6 +25,15 @@ const Popularbooks = () => {
           <Text style={{color:'red'}}>Something went wrong</Text>
         ) : (
             <FlatList
+            data={[1,2,3,4]}
+            renderItem={({item}) => (
+              <PopularJobCard
+                item={item}
+              />
+            )}
+            keyExtractor={item => item?.job_id}
+            contentContainerStyle={{ columnGpa: SIZES.medium}}
+            horizontal  
             />
         )}
       </View>

@@ -6,7 +6,7 @@ import styles from './popularjobcard.style'
 const PopularJobCard = () => {
   return (
     <View>
-      <Text>PopularBookCard</Text>
+      <Text>PopularBookCard </Text>
     </View>
   )
 }
