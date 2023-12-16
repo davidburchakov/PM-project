@@ -5,11 +5,19 @@ import { COLORS, SIZES} from '../../../constants';
 import styles from './popularbooks.style'
 import PopularJobCard from '../../common/cards/popular/PopularJobCard';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import useFetch from '../../../hook/useFetch'
 
 const Popularbooks = () => {
   const router = useRouter();
-  const isLoading = false;
-  const error = false;
+  const { data, isLoading, error } = useFetch('search', {
+    query: 'React developer',
+    num_pages: 1
+  })
+
+  console.log("data: ", data)
+  console.log("isloading", isLoading)
+  console.log("error: ", error)
+  
   return (
     <View style={styles.container}>
       <View style={styles.header}>
