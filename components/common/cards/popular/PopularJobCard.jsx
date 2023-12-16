@@ -1,10 +1,9 @@
 import React from 'react'
-import { View, Text, Image } from 'react-native'
-
+import { View, Text, Image, TouchableOpacity } from 'react-native'
 import styles from './popularjobcard.style'
-import { TouchableOpacity } from 'react-native-gesture-handler'
 
 const PopularJobCard = ({ item, selectedJob, handleCardPress}) => {
+  console.log("Item: ", item)
   return (
     <TouchableOpacity
       style={styles.container(selectedJob, item)}
@@ -18,6 +17,17 @@ const PopularJobCard = ({ item, selectedJob, handleCardPress}) => {
         />
 
       </TouchableOpacity>
+      <Text
+        style={styles.companyName} numberOfLines={1}>
+            {item.employer_name}
+      </Text>
+
+      <View style={styles.infoContainer}>
+        <Text style={styles.jobName(selectedJob, item)} numberOfLines={1}>
+          {item.job_title}
+        </Text>
+        <Text style={styles.location}>{item.job_country}</Text>
+      </View>
     </TouchableOpacity>
   )
 }
