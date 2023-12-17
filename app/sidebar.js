@@ -22,6 +22,7 @@ const Sidebar = ({ isVisible, onClose }) => {
         />
       </TouchableOpacity>
 
+      <Text>{t('welcome')}</Text>
       <TouchableOpacity onPress={() => handleLanguageChange('en')} style={styles.languageItem}>
         <Text style={styles.menuItem}>English</Text>
       </TouchableOpacity>
@@ -29,7 +30,6 @@ const Sidebar = ({ isVisible, onClose }) => {
       <TouchableOpacity onPress={() => handleLanguageChange('pl')} style={styles.languageItem}>
         <Text style={styles.menuItem}>Polski</Text>
       </TouchableOpacity>
-      <Text>{t('welcome')}</Text>
     </View>
   );
 };

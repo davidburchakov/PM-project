@@ -19,10 +19,13 @@ import {
 } from "../../components";
 import { COLORS, icons, SIZES } from "../../constants";
 import useFetch from "../../hook/useFetch";
+import '../../utils/i18n'
+import { useTranslation } from 'react-i18next';
 
 const tabs = ["About", "Qualifications", "Responsibilities"];
 
 const JobDetails = () => {
+  const { t } = useTranslation();
   const params = useSearchParams();
   const router = useRouter();
 
@@ -45,7 +48,7 @@ const JobDetails = () => {
       case "Qualifications":
         return (
           <Specifics
-            title='Qualifications'
+            title={t('Qualifications')}
             points={data[0].job_highlights?.Qualifications ?? ["N/A"]}
           />
         );
@@ -58,7 +61,7 @@ const JobDetails = () => {
       case "Responsibilities":
         return (
           <Specifics
-            title='Responsibilities'
+            title={t('Responsibilities')}
             points={data[0].job_highlights?.Responsibilities ?? ["N/A"]}
           />
         );

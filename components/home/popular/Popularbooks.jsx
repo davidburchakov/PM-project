@@ -6,8 +6,11 @@ import styles from './popularbooks.style'
 import PopularJobCard from '../../common/cards/popular/PopularJobCard';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import useFetch from '../../../hook/useFetch'
+import '../../../utils/i18n';
+import { useTranslation } from 'react-i18next';
 
 const Popularbooks = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const { data, isLoading, error } = useFetch('search', {
     query: 'React developer',
@@ -22,16 +25,16 @@ const Popularbooks = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Popular jobs</Text>
+        <Text style={styles.headerTitle}>{t('Popular jobs')}</Text>
         <TouchableOpacity>
-          <Text style={styles.headerBtn}>Show all</Text>
+          <Text style={styles.headerBtn}>{t('Show all')}</Text>
         </TouchableOpacity>
       </View> 
       <View style={styles.cardsContainer}>
         {isLoading?(
           <ActivityIndicator size="large" colors={COLORS.primary} />
         ) : error ? (
-          <Text style={{color:'red'}}>Something went wrong</Text>
+          <Text style={{color:'red'}}>{t('Something went wrong')}</Text>
         )
          : (<>
 

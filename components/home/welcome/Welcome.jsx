@@ -9,17 +9,21 @@ import {  View,
 import { useRouter } from 'expo-router';
 import styles from './welcome.style'
 import { icons, SIZES } from "../../../constants";
+import '../../../utils/i18n';
+import { useTranslation } from 'react-i18next';
 
 const bookTypes = ["Full-time", "Part-time", "Remote"];
 
 const Welcome = () => {
   const router = useRouter();
   const [activeBookType, setActiveBookType] = useState("Full-time")
+  const { t, i18n } = useTranslation();
+
   return (
     <View>
       <View style={styles.container}>
-        <Text style={styles.welcomeMessage}>Hello User!</Text>
-        <Text style={styles.userName}>Find your perfect job!</Text>
+        <Text style={styles.welcomeMessage}>{t('Hello User!')}</Text>
+        <Text style={styles.userName}>{t('Find your perfect job!')}</Text>
       </View>
 
       <View style={styles.searchContainer}>
@@ -28,7 +32,7 @@ const Welcome = () => {
             style={styles.searchInput}
             value=""
             onChange={() => {}}
-            placeholder='What are you looking for?'
+            placeholder={t('What are you looking for?')}
           />
         </View>
         <TouchableOpacity>

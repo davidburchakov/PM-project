@@ -14,6 +14,17 @@ i18n
       pl: {
         translation: {
           "welcome": "Witamy",
+          "Hello User!" : "Dzień dobry, użytkowniku!",
+          "Find your perfect job!": "Znajdź pracę o której marzysz...",
+          "What are you looking for?": "Czego szukasz?",
+          "Popular jobs": "Popularne oferty",
+          "Show all": "Pokaż wszystkie",
+          "Something went wrong": "Coś poszło nie tak...",
+          "About the job:": "O pracę:",
+          'Qualifications': "Kwalifikacje",
+          "Responsibilities": "Odpowiedzialności",
+
+
           // more Polish translations...
         }
       }
