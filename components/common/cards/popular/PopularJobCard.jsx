@@ -11,7 +11,7 @@ const PopularJobCard = ({ item, selectedJob, handleCardPress}) => {
     >
       <TouchableOpacity style={styles.logoContainer(selectedJob, item)}>
         <Image
-          source={{ uri: checkImageURL(item.employer_logo) ? item.employer_logo : 'https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA5L2pvYjk2MC0xMzgtcC5wbmc.png'}}
+          source={{ uri: checkImageURL(item.employer_logo) ? item.employer_logo : 'https://static.vecteezy.com/system/resources/previews/020/336/735/non_2x/tesla-logo-tesla-icon-transparent-png-free-vector.jpg'}}
           // source={{uri: item.employer_logo}}
           resizeMode="contain"
           style={styles.logoImage}

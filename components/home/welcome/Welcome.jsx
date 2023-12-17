@@ -10,16 +10,16 @@ import { useRouter } from 'expo-router';
 import styles from './welcome.style'
 import { icons, SIZES } from "../../../constants";
 
-const bookTypes = ["Classic", "Science Fiction", "Popular Science"];
+const bookTypes = ["Full-time", "Part-time", "Remote"];
 
 const Welcome = () => {
   const router = useRouter();
-  const [activeBookType, setActiveBookType] = useState("Classic")
+  const [activeBookType, setActiveBookType] = useState("Full-time")
   return (
     <View>
       <View style={styles.container}>
         <Text style={styles.welcomeMessage}>Hello User!</Text>
-        <Text style={styles.userName}>Find your perfect book!</Text>
+        <Text style={styles.userName}>Find your perfect job!</Text>
       </View>
 
       <View style={styles.searchContainer}>
