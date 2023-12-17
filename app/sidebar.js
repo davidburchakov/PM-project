@@ -1,8 +1,16 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { icons} from '../constants/';
+import '../utils/i18n';
+import { useTranslation } from 'react-i18next';
+
 const Sidebar = ({ isVisible, onClose }) => {
   if (!isVisible) return null;
+  const { t, i18n } = useTranslation();
+  
+  const handleLanguageChange = (language) => {
+    i18n.changeLanguage(language);
+  };
 
   return (
     <View style={styles.sidebar}>
@@ -14,7 +22,14 @@ const Sidebar = ({ isVisible, onClose }) => {
         />
       </TouchableOpacity>
 
-      <Text style={styles.menuItem}>Polski</Text>
+      <TouchableOpacity onPress={() => handleLanguageChange('en')} style={styles.languageItem}>
+        <Text style={styles.menuItem}>English</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={() => handleLanguageChange('pl')} style={styles.languageItem}>
+        <Text style={styles.menuItem}>Polski</Text>
+      </TouchableOpacity>
+      <Text>{t('welcome')}</Text>
     </View>
   );
 };
