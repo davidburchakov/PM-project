@@ -33,7 +33,7 @@ const Home = () => {
                         <Welcome
                         />
                         <Popularbooks/>
-                        <Nearbyjobs/>
+                        {/* <Nearbyjobs/> */}
                 </View>
              </ScrollView>
         </SafeAreaView>
