@@ -8,7 +8,6 @@ i18n
       en: {
         translation: {
           "welcome": "Welcome",
-          // more English translations...
         }
       },
       pl: {
@@ -23,8 +22,6 @@ i18n
           "About the job:": "O pracę:",
           'Qualifications': "Kwalifikacje",
           "Responsibilities": "Odpowiedzialności",
-
-
           // more Polish translations...
         }
       }

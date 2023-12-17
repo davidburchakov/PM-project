@@ -9,7 +9,7 @@ import useFetch from '../../../hook/useFetch'
 import '../../../utils/i18n';
 import { useTranslation } from 'react-i18next';
 
-const Popularbooks = () => {
+const Popularjobs = () => {
   const { t } = useTranslation();
   const router = useRouter();
   const { data, isLoading, error } = useFetch('search', {
@@ -38,7 +38,6 @@ const Popularbooks = () => {
         )
          : (<>
 
-          {/* <Text>Not error</Text>  */}
             <FlatList
               data={data}
               renderItem={({item}) => (
@@ -59,4 +58,4 @@ const Popularbooks = () => {
   )
 }
 
-export default Popularbooks
+export default Popularjobs

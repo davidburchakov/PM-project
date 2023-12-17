@@ -4,7 +4,7 @@ import { View, Text, ScrollView, SafeAreaView } from 'react-native';
 import { Stack, useRouter } from 'expo-router';
 import Layout from './_layout'
 import { COLORS, icons, images, SIZES } from '../constants/';
-import { Nearbyjobs, Popularbooks, ScreenHeaderBtn, Welcome } from '../components'
+import { Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome } from '../components'
 
 import Sidebar from './sidebar';
 const Home = () => {
@@ -42,8 +42,7 @@ const Home = () => {
                     }}>
                         <Welcome
                         />
-                        <Popularbooks/>
-                        {/* <Nearbyjobs/> */}
+                        <Popularjobs/>
                 </View>
              </ScrollView>
         </SafeAreaView>
