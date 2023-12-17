@@ -7,7 +7,8 @@ const useFetch = (endpoint, query) => {
     const [data, setData]  = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
-
+    // console.log("---------------------------------------------------")
+    // console.log("data", data)
     const options = {
         method: 'GET',
         url: `https://jsearch.p.rapidapi.com/${endpoint}`,
