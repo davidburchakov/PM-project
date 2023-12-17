@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { View, Text, FlatList, ActivityIndicator } from 'react-native'
 import { useRouter } from 'expo-router'
 import { COLORS, SIZES} from '../../../constants';
-import styles from './popularbooks.style'
+import styles from './popularjobs.style'
 import PopularJobCard from '../../common/cards/popular/PopularJobCard';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import useFetch from '../../../hook/useFetch'
@@ -58,4 +58,4 @@ const Popularjobs = () => {
   )
 }
 
-export default Popularjobs
+export default Popularjobs;
