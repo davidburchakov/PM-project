@@ -7,13 +7,15 @@ Use [`expo-router`](https://docs.expo.dev/router/introduction/) to build native 
 ```sh
 npx create-expo-app -e with-router
 ```
+~~~~
+# run the project
+expo-cli start --tunnel
+~~~~
+
+You will be given a QR code that you should scan using Expo mobile application.
 
 ## 📝 Notes
 
 - [Expo Router: Docs](https://docs.expo.dev/router/introduction/)
 
 ## Set-up commans
-
-~~~~
-expo-cli start --tunnel
-~~~~
