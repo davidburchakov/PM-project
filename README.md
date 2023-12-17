@@ -5,6 +5,7 @@ Use [`expo-router`](https://docs.expo.dev/router/introduction/) to build native 
 ## 🚀 How to use
 
 ```sh
+# create a new project
 npx create-expo-app -e with-router
 ```
 ~~~~
